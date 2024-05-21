@@ -6,3 +6,7 @@
 6: ask the person in charge for help w anything
 
 //road runner docs link: https://rr.brott.dev/docs/v1-0/installation/
+
+
+Progress
+Pranav - Finished parts 1 & 2
