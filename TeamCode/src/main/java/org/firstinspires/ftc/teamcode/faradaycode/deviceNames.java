@@ -6,8 +6,11 @@ public interface deviceNames {
     String SlideLName = "LeftSlide";
     String SlideRName = "RightSlide";
 
+
     //servos
-    String dummyServoName = "dummyServo"; //Expansion hub 2
+   // String dummyServoName = "dummyServo"; //Expansion hub 2
+    String ServoOneName = "ServoOne";
+    String ServoTwoName = "ServoTwo";
 
     //motors
     String dummyDCMotorName = "dummyDCMotor"; //Control hub 1

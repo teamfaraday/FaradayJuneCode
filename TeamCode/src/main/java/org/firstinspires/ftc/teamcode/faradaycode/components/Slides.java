@@ -10,7 +10,7 @@ import org.firstinspires.ftc.teamcode.faradaycode.*;
 public class Slides implements  deviceNames{
 
     //speeds for rotation
-    public double power1 = 1;
+    public double power1 = 0.7;
     public double power2 = -1;
 
     //amnt to slow smth down by
@@ -19,17 +19,19 @@ public class Slides implements  deviceNames{
     //inits motor objects
     //public DcMotor dummyDCMotor;
     public DcMotor LeftSlide;
+    public DcMotor RightSlide;
 
     //inits object and assigns servo names
     public Slides(HardwareMap hardwareMap) {
         LeftSlide = hardwareMap.dcMotor.get(SlideLName);
+        RightSlide = hardwareMap.dcMotor.get(SlideRName);
     }
 
     //when called, parse through for motion
-    public void iterate(boolean forward, boolean reverse) {
-        if (forward) {
+    public void iterate(boolean up, boolean down) {
+        if (up) {
             activate();
-        } else if (reverse) {
+        } else if (down) {
             reverse();
         } else{
             deactivate();
@@ -38,12 +40,15 @@ public class Slides implements  deviceNames{
 
     //functions
     public void activate() {
-        dummyDCMotor.setPower(power1 * OpModes.nerf * ((OpModes.isSlow) ? slowConst: 1));
+        LeftSlide.setPower(power1 * OpModes.nerf * ((OpModes.isSlow) ? slowConst: 1));
+        RightSlide.setPower(-power1 * OpModes.nerf * ((OpModes.isSlow) ? slowConst: 1));
     }
     public void deactivate() {
-        dummyDCMotor.setPower(0);
+        LeftSlide.setPower(0);
+        RightSlide.setPower(0);
     }
     public void reverse() {
-        dummyDCMotor.setPower(power2 * OpModes.nerf * ((OpModes.isSlow) ? slowConst: 1));
+        LeftSlide.setPower(power2 * OpModes.nerf * ((OpModes.isSlow) ? slowConst: 1));
+        RightSlide.setPower(-power2 * OpModes.nerf * ((OpModes.isSlow) ? slowConst: 1));
     }
 }
