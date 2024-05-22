@@ -32,7 +32,7 @@ public class autoSave extends OpModes {
 
         //init stuff
         waitForStart();
-        servoSave.moveUp();
+        //servoSave.moveUp();
 
         if (isStopRequested()) return;
 
@@ -58,7 +58,7 @@ public class autoSave extends OpModes {
         List<Recognition> currentRecognitions;
         currentRecognitions = tFod.tfod.getRecognitions();
         if (currentRecognitions.size() != 0 && !stopped) {
-            servoSave.moveDown(); //you can still run normal commands in here
+           // servoSave.moveDown(); //you can still run normal commands in here
             isSlow = true;
             sleep(1000);
         }
