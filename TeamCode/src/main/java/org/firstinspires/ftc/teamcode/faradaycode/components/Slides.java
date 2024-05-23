@@ -18,13 +18,13 @@ public class Slides implements  deviceNames{
 
     //inits motor objects
     //public DcMotor dummyDCMotor;
-    public DcMotor LeftSlide;
-    public DcMotor RightSlide;
+    public DcMotor leftSlide;
+    public DcMotor rightSlide;
 
     //inits object and assigns servo names
     public Slides(HardwareMap hardwareMap) {
-        LeftSlide = hardwareMap.dcMotor.get(SlideLName);
-        RightSlide = hardwareMap.dcMotor.get(SlideRName);
+        leftSlide = hardwareMap.dcMotor.get(slideLName);
+        rightSlide = hardwareMap.dcMotor.get(slideRName);
     }
 
     //when called, parse through for motion
@@ -40,15 +40,15 @@ public class Slides implements  deviceNames{
 
     //functions
     public void activate() {
-        LeftSlide.setPower(power1 * OpModes.nerf * ((OpModes.isSlow) ? slowConst: 1));
-        RightSlide.setPower(-power1 * OpModes.nerf * ((OpModes.isSlow) ? slowConst: 1));
+        leftSlide.setPower(power1 * OpModes.nerf * ((OpModes.isSlow) ? slowConst: 1));
+        rightSlide.setPower(-power1 * OpModes.nerf * ((OpModes.isSlow) ? slowConst: 1));
     }
     public void deactivate() {
-        LeftSlide.setPower(0);
-        RightSlide.setPower(0);
+        leftSlide.setPower(0);
+        rightSlide.setPower(0);
     }
     public void reverse() {
-        LeftSlide.setPower(power2 * OpModes.nerf * ((OpModes.isSlow) ? slowConst: 1));
-        RightSlide.setPower(-power2 * OpModes.nerf * ((OpModes.isSlow) ? slowConst: 1));
+        leftSlide.setPower(power2 * OpModes.nerf * ((OpModes.isSlow) ? slowConst: 1));
+        rightSlide.setPower(-power2 * OpModes.nerf * ((OpModes.isSlow) ? slowConst: 1));
     }
 }

@@ -8,20 +8,20 @@ import org.firstinspires.ftc.teamcode.faradaycode.*;
 public class Claw implements deviceNames {
 
     //values for servo pos, modify as needed after testing
-    public double servoOnePosOne = 1;
-    public double servoOnePosTwo = 0;
-    public double servoTwoPosOne = 1;
-    public double servoTwoPosTwo = 0;
+    public double clawLOpen = 1;
+    public double clawLClose = 0;
+    public double clawROpen = 1;
+    public double clawRClose = 0;
 
 
     //inits servo objects
-    public Servo ServoOne;
-    public Servo ServoTwo;
+    public Servo clawL;
+    public Servo clawR;
 
     //inits object and assigns servo names
     public Claw(HardwareMap hardwareMap) {
-        ServoOne = hardwareMap.get(Servo.class, ServoOneName);
-        ServoTwo = hardwareMap.get(Servo.class, ServoTwoName);
+        clawL = hardwareMap.get(Servo.class, clawLName);
+        clawR = hardwareMap.get(Servo.class, clawRName);
     }
 
     //what gets called
@@ -33,11 +33,11 @@ public class Claw implements deviceNames {
     //functions
     //use 'OpModes.nerf' to grab nerf value for servo testing
     public void openClaw() {
-        ServoOne.setPosition(servoOnePosOne);
-        ServoTwo.setPosition(servoTwoPosOne);
+        clawL.setPosition(clawLOpen);
+        clawR.setPosition(clawROpen);
     }
     public void closeClaw() {
-        ServoOne.setPosition(servoOnePosTwo);
-        ServoTwo.setPosition(servoTwoPosTwo);
+        clawL.setPosition(clawLClose);
+        clawR.setPosition(clawRClose);
     }
 }
