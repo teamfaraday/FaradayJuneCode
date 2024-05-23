@@ -1,8 +1,8 @@
 package org.firstinspires.ftc.teamcode.faradaycode;
 import com.qualcomm.robotcore.eventloop.opmode.LinearOpMode;
 
-import org.firstinspires.ftc.teamcode.faradaycode.components.DriveTrainTeleOp;
-import org.firstinspires.ftc.teamcode.faradaycode.components.Nerf;
+//import saves.faradaycode.components.*;
+import org.firstinspires.ftc.teamcode.faradaycode.components.*;
 
 public abstract class OpModes extends LinearOpMode{
     /*
@@ -28,12 +28,12 @@ public abstract class OpModes extends LinearOpMode{
             3: rotate1
             4: rotate2 */
 
-    public ServoSave servoSave;
-    public CRServoSave crServoSave;
-    public DCMotorSave dcMotorSave;
+    public Claw claw;
+    public Slides slides;
+    // public DCMotorSave dcMotorSave;
     public DriveTrainTeleOp driveTrainTeleOp;
 
-    public org.firstinspires.ftc.teamcode.faradaycode.components.Nerf Nerf = new Nerf();
+    public Nerf Nerf = new Nerf();
     //public ElapsedTime timeSpent = new ElapsedTime();
 
     public boolean stopped = false;
@@ -42,9 +42,9 @@ public abstract class OpModes extends LinearOpMode{
 
     public void turnOn() {
         driveTrainTeleOp = new DriveTrainTeleOp(hardwareMap);
-        servoSave = new ServoSave(hardwareMap);
-        crServoSave = new CRServoSave(hardwareMap);
-        dcMotorSave = new DCMotorSave(hardwareMap);
+        claw = new Claw(hardwareMap);
+        slides = new Slides(hardwareMap);
+        //dcMotorSave = new DCMotorSave(hardwareMap); Not gotten to this yet
 
     }
 
