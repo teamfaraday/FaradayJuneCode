@@ -12,10 +12,7 @@ public interface deviceNames {
     String clawRName = "rightClaw";
 
     //motors
-    String dummyDCMotorName = "dummyDCMotor"; //Control hub 1
-
-    //crservos
-    String dummyCRServoName = "dummyCRServo";
+    String dummyDCMotorName = "skibidiMotor"; //Control hub 1
 
     // drivetrain
     String leftFrontName = "leftFront";

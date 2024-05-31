@@ -1,7 +1,6 @@
 package org.firstinspires.ftc.teamcode.faradaycode;
 import com.qualcomm.robotcore.eventloop.opmode.LinearOpMode;
 
-//import saves.faradaycode.components.*;
 import org.firstinspires.ftc.teamcode.faradaycode.components.*;
 
 public abstract class OpModes extends LinearOpMode{
@@ -33,7 +32,7 @@ public abstract class OpModes extends LinearOpMode{
     // public DCMotorSave dcMotorSave;
     public DriveTrainTeleOp driveTrainTeleOp;
 
-    public Nerf Nerf = new Nerf();
+    public org.firstinspires.ftc.teamcode.faradaycode.components.Nerf Nerf = new Nerf();
     //public ElapsedTime timeSpent = new ElapsedTime();
 
     public boolean stopped = false;
