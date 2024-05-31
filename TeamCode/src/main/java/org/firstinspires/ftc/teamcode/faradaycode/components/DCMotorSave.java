@@ -52,6 +52,8 @@ public class DCMotorSave implements  deviceNames{
     }
 
     public void encoderRun(int ticks) {
+        dummyDCMotor.setMode(DcMotor.RunMode.RUN_USING_ENCODER);
+
         int encoderPos;
         encoderPos = dummyDCMotor.getCurrentPosition();
         encoderPos -= (ticks);

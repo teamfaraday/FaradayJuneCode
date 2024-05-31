@@ -16,7 +16,7 @@ public class skibidiMotor extends OpModes {
 
         waitForStart();
 
-        dcMotorSave.encoderRun(100);
+        //dcMotorSave.encoderRun(100);
         while (opModeIsActive() && !stopped){
             isSlow = gamepad1.right_trigger > 0.6;
             dcMotorSave.iterate(gamepad1.a, gamepad1.b);
