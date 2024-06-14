@@ -1,5 +1,5 @@
 
-package org.firstinspires.ftc.teamcode.faradaycode.components;
+package org.firstinspires.ftc.teamcode.faradaycode.trash;
 
 import com.qualcomm.robotcore.hardware.DcMotor;
 import com.qualcomm.robotcore.hardware.HardwareMap;

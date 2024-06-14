@@ -6,7 +6,6 @@ import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
 import org.firstinspires.ftc.teamcode.faradaycode.OpModes;
 import org.firstinspires.ftc.teamcode.faradaycode.components.DriveTrainTeleOp;
 
-@Disabled
 @TeleOp(name = "driveTrainTest")
 public class driveTrainTest extends OpModes {
     public DriveTrainTeleOp driveTrainTeleOp;
@@ -17,7 +16,8 @@ public class driveTrainTest extends OpModes {
         waitForStart();
 
         while (opModeIsActive() && !stopped){
-            isSlow = gamepad1.right_trigger > 0.6;
+            stopped = gamepad1.left_bumper && gamepad1.left_trigger > 0.6 && gamepad1.right_bumper && gamepad1.right_trigger > 0.6;
+            NerfSlow.iterate(gamepad1.left_trigger, gamepad1.dpad_right, gamepad1.dpad_left);
             driveTrainTeleOp.iterate(gamepad1.left_stick_y, -gamepad1.right_stick_x, -gamepad1.left_stick_x);
         }
     }

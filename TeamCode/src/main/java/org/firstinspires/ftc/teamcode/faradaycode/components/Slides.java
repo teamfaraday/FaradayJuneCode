@@ -28,7 +28,7 @@ public class Slides implements  deviceNames{
     }
 
     //when called, parse through for motion
-    public void iterate(boolean up, boolean down) {
+    public void iterate(boolean down, boolean up) {
         if (up) {
             activate();
         } else if (down) {
@@ -40,15 +40,15 @@ public class Slides implements  deviceNames{
 
     //functions
     public void activate() {
-        leftSlide.setPower(power1 * OpModes.nerf * ((OpModes.isSlow) ? slowConst: 1));
-        rightSlide.setPower(-power1 * OpModes.nerf * ((OpModes.isSlow) ? slowConst: 1));
+        leftSlide.setPower(power1 * OpModes.nerf * ((OpModes.isSlow) ? slowConst: OpModes.slowAmnt));
+        rightSlide.setPower(-power1 * OpModes.nerf * ((OpModes.isSlow) ? slowConst: OpModes.slowAmnt));
     }
     public void deactivate() {
         leftSlide.setPower(0);
         rightSlide.setPower(0);
     }
     public void reverse() {
-        leftSlide.setPower(power2 * OpModes.nerf * ((OpModes.isSlow) ? slowConst: 1));
-        rightSlide.setPower(-power2 * OpModes.nerf * ((OpModes.isSlow) ? slowConst: 1));
+        leftSlide.setPower(power2 * OpModes.nerf * ((OpModes.isSlow) ? slowConst: OpModes.slowAmnt));
+        rightSlide.setPower(-power2 * OpModes.nerf * ((OpModes.isSlow) ? slowConst: OpModes.slowAmnt));
     }
 }

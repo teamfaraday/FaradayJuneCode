@@ -1,18 +1,40 @@
 package org.firstinspires.ftc.teamcode.faradaycode;
 
+/*
+    Control Hub
+        Motors
+            0: backRight
+            1: backLeft
+            2: frontRight
+            3: frontLeft
+        Servos
+            0:
+            1:
+    Expansion Hub
+        Motors
+            0: rightSlide
+            1: leftSlide
+            2:
+            3:
+        Servos
+            0:
+            1:
+            2:
+            3:
+            4:
+  */
+
+
 public interface deviceNames {
 
     //slides
-    String slideLName = "LeftSlide";
-    String slideRName = "RightSlide";
+    String slideLName = "leftSlide";
+    String slideRName = "rightSlide";
 
 
     //claws
     String clawLName = "leftClaw";
     String clawRName = "rightClaw";
-
-    //motors
-    String dummyDCMotorName = "skibidiMotor"; //Control hub 1
 
     // drivetrain
     String leftFrontName = "leftFront";
@@ -31,5 +53,9 @@ public interface deviceNames {
     String redLabel = "r";
     String blueAsset = "bb.tflite";
     String redAsset = "rr.tflite";
+
+    //trash
+    String dummyDCMotorName = "skibidiMotor"; //Control hub 1
+    String dummyServoName = "skibidiServo";
 
 }
