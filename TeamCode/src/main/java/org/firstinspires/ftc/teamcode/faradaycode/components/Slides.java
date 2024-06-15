@@ -12,6 +12,7 @@ public class Slides implements  deviceNames{
     //speeds for rotation
     public double power1 = 0.7;
     public double power2 = -1;
+    public double antiGravPower = 0.13;
 
     //amnt to slow smth down by
     public double slowConst = 0.5;
@@ -44,8 +45,8 @@ public class Slides implements  deviceNames{
         rightSlide.setPower(-power1 * OpModes.nerf * ((OpModes.isSlow) ? slowConst: OpModes.slowAmnt));
     }
     public void deactivate() {
-        leftSlide.setPower(0);
-        rightSlide.setPower(0);
+        leftSlide.setPower(antiGravPower);
+        rightSlide.setPower(-antiGravPower);
     }
     public void reverse() {
         leftSlide.setPower(power2 * OpModes.nerf * ((OpModes.isSlow) ? slowConst: OpModes.slowAmnt));

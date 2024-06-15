@@ -3,10 +3,10 @@ package org.firstinspires.ftc.teamcode.faradaycode;
 /*
     Control Hub
         Motors
-            0: backRight
-            1: backLeft
-            2: frontRight
-            3: frontLeft
+            0: rightRear
+            1: leftRear
+            2: rightFront
+            3: leftFront
         Servos
             0:
             1:
