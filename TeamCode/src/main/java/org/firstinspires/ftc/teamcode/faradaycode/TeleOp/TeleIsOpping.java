@@ -15,7 +15,7 @@ public class TeleIsOpping extends OpModes {
         //claw.openClaw();
 
         while (opModeIsActive() && !stopped){
-            telemetry.addData("nerf", nerf);
+            telemetry.addData("nerf", OpModes.nerf);
             telemetry.update();
 
             NerfSlow.iterate(gamepad1.left_trigger, gamepad1.dpad_right, gamepad1.dpad_left);

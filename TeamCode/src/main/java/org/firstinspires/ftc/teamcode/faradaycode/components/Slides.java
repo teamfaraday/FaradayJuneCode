@@ -43,6 +43,7 @@ public class Slides implements  deviceNames{
     public void activate() {
         leftSlide.setPower(power1 * OpModes.nerf * ((OpModes.isSlow) ? slowConst: OpModes.slowAmnt));
         rightSlide.setPower(-power1 * OpModes.nerf * ((OpModes.isSlow) ? slowConst: OpModes.slowAmnt));
+
     }
     public void deactivate() {
         leftSlide.setPower(antiGravPower);
