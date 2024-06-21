@@ -12,16 +12,16 @@ public class TeleIsOpping extends OpModes {
 
         waitForStart();
 
-        //claw.openClaw();
+        claw.openClaw();
 
-        while (opModeIsActive() && !stopped){
+        while (opModeIsActive() && !(gamepad1.start || gamepad2.start)){
             telemetry.addData("nerf", OpModes.nerf);
+            telemetry.addData("slowAmnt", OpModes.slowAmnt);
             telemetry.update();
 
             NerfSlow.iterate(gamepad1.left_trigger, gamepad1.dpad_right, gamepad1.dpad_left);
-            stopped = gamepad1.left_bumper && gamepad1.left_trigger > 0.6 && gamepad1.right_bumper && gamepad1.right_trigger > 0.6;
 
-            //claw.iterate(gamepad1.a, gamepad1.b);
+            claw.iterate(gamepad1.a, gamepad1.b);
             slides.iterate(gamepad1.left_bumper, gamepad1.right_bumper);
             driveTrainTeleOp.iterate(gamepad1.left_stick_y, gamepad1.left_stick_x, gamepad1.right_stick_x);
         }

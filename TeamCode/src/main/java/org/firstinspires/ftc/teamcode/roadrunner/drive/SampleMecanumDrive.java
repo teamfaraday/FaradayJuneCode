@@ -107,6 +107,13 @@ public class SampleMecanumDrive extends MecanumDrive implements RRConstants, dev
         leftRear.setDirection(DcMotorSimple.Direction.REVERSE);
         leftFront.setDirection(DcMotorSimple.Direction.REVERSE);
 
+        /* fR.setDirection(DcMotor.Direction.REVERSE);
+        bR.setDirection(DcMotor.Direction.FORWARD);
+        bL.setDirection(DcMotor.Direction.FORWARD);
+        fL.setDirection(DcMotor.Direction.FORWARD);
+        perchance?!?!?
+        */
+
         List<Integer> lastTrackingEncPositions = new ArrayList<>();
         List<Integer> lastTrackingEncVels = new ArrayList<>();
 

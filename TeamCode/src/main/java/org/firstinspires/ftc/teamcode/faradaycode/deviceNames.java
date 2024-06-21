@@ -17,8 +17,8 @@ package org.firstinspires.ftc.teamcode.faradaycode;
             2:
             3:
         Servos
-            0:
-            1:
+            0: clawL
+            1: clawR
             2:
             3:
             4:

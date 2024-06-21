@@ -8,10 +8,10 @@ import org.firstinspires.ftc.teamcode.faradaycode.*;
 public class Claw implements deviceNames {
 
     //values for servo pos, modify as needed after testing
-    public double clawLOpen = 1;
-    public double clawLClose = 0;
-    public double clawROpen = 1;
-    public double clawRClose = 0;
+    public double clawLOpen = 0.974;
+    public double clawLClose = 0.8;
+    public double clawROpen = 0.6;
+    public double clawRClose = 0.798;
 
 
     //inits servo objects
@@ -39,5 +39,9 @@ public class Claw implements deviceNames {
     public void closeClaw() {
         clawL.setPosition(clawLClose);
         clawR.setPosition(clawRClose);
+    }
+    public void setPos(double pos) {
+        clawL.setPosition(pos);
+        clawR.setPosition(pos);
     }
 }

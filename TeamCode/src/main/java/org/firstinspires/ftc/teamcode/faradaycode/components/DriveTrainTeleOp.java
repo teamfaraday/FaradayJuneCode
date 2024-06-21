@@ -3,7 +3,7 @@ package org.firstinspires.ftc.teamcode.faradaycode.components;
 import com.qualcomm.robotcore.hardware.*;
 import org.firstinspires.ftc.teamcode.faradaycode.*;
 
-public class    DriveTrainTeleOp implements deviceNames{
+public class DriveTrainTeleOp implements deviceNames{
 
     //constants
     public double powerRange = 1;

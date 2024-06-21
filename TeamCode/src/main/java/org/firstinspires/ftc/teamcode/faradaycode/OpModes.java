@@ -9,6 +9,7 @@ public abstract class OpModes extends LinearOpMode{
     //public Claw claw;
     public Slides slides;
     public DriveTrainTeleOp driveTrainTeleOp;
+    public Claw claw;
 
     public NerfSlow NerfSlow = new NerfSlow();
     //public ElapsedTime timeSpent = new ElapsedTime();
@@ -20,7 +21,7 @@ public abstract class OpModes extends LinearOpMode{
 
     public void turnOn() {
         driveTrainTeleOp = new DriveTrainTeleOp(hardwareMap);
-        //claw = new Claw(hardwareMap);
+        claw = new Claw(hardwareMap);
         slides = new Slides(hardwareMap);
 
     }
