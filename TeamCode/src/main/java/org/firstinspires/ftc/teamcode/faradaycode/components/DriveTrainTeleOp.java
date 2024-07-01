@@ -6,7 +6,7 @@ import org.firstinspires.ftc.teamcode.faradaycode.*;
 public class DriveTrainTeleOp implements deviceNames{
 
     //constants
-    public double powerRange = 1;
+    public final double powerRange = 1;
     public double slowConst = 0.45;
 
     //inits motor objects
