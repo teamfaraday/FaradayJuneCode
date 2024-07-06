@@ -14,7 +14,6 @@ public abstract class OpModes extends LinearOpMode{
     public NerfSlow NerfSlow = new NerfSlow();
     //public ElapsedTime timeSpent = new ElapsedTime();
 
-    public boolean stopped = false;
     public static double nerf = 1;
     public static boolean isSlow = false;
     public static double slowAmnt = 1.0;

@@ -45,6 +45,10 @@ public class autoSave extends OpModes {
                 .turn(Math.toRadians(90)) //also self explanatory
                 .build();
 
+        TrajectorySequence traj2 = drive.trajectorySequenceBuilder(traj1.end())
+                .forward(1)
+                .build();
+
         //initiate start coords (all coords are relative based on these start coords)
         drive.setPoseEstimate( new Pose2d(0, 0, 0));
 
@@ -57,7 +61,10 @@ public class autoSave extends OpModes {
         //tfod detection
         List<Recognition> currentRecognitions;
         currentRecognitions = tFod.tfod.getRecognitions();
-        if (currentRecognitions.size() != 0 && !stopped) {
+        if (currentRecognitions.size() != 0) {
+            if (currentRecognitions.get(0).equals("cyan")) {
+                slides.setPower(1);
+            }
            // servoSave.moveDown(); //you can still run normal commands in here
             isSlow = true;
             sleep(1000);

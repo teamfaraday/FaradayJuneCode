@@ -18,8 +18,8 @@ public class tester extends OpModes {
         waitForStart();
 
         //dcMotorSave.encoderRun(100);
-        while (opModeIsActive() && !stopped){
-            NerfSlow.iterate(gamepad1.left_trigger, gamepad1.dpad_right, gamepad1.dpad_left);
+        while (opModeIsActive() && !gamepad1.start){
+            NerfSlow.iterate(gamepad1.left_bumper, gamepad1.dpad_right, gamepad1.dpad_left);
             dcMotorSave.iterate(gamepad1.a, gamepad1.b);
             //servoSave.iterate(gamepad1.dpad_left, gamepad1.dpad_right);
         }
